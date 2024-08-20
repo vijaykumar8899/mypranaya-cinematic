@@ -1,14 +1,7 @@
 import React from "react";
-import "../../assets/Styles/Components/Home.css";
-import "../../assets/Styles/Global.css";
-import "../../assets/Styles/default.css";
 
-// import "../../assets/Styles/output.css";
-// import "../../assets/Styles/responsive.css";
-// import "../../assets/Styles/style.css";
+import "../assets/Styles/Pages/Home.css";
 
-// import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css";
-// import "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css";
 
 const Home = () => {
   return (
