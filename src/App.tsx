@@ -1,17 +1,15 @@
-// ? React import start
+// ? React imports
 import { useState } from "react";
-// ? React import start
 
-// ? Styles import start
+
+// ? Styles imports 
 import "./App.css";
 import "./index.css";
 
-// ? Styles import End
 
-// ? Components Import start
-import Home from "./Components/Specific/Home";
-import Magzine from "./Components/Specific/Magzine";
-// ? Components Import start
+// ? Components Imports
+import Home from "./Pages/Home"
+
 
 function App() {
   return (
