@@ -1,12 +1,14 @@
-import React from 'react'
-import "../../assets/Styles/Components/Careers.css";
-import "../../assets/Styles/Global.css";
-import "../../assets/Styles/default.css";
+import React from 'react';
+import "../assets/Styles/Pages/Careers.css";
+import NavBar from '../Components/Common/Navbar';
 
-const Careers = () => {
+function Careers() {
   return (
-    <div>Careers</div>
-  )
+    <React.Fragment>
+      <NavBar />
+      <div>Careers</div>
+    </React.Fragment>
+  );
 }
 
-export default Careers
+export default Careers;

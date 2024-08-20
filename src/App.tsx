@@ -1,24 +1,28 @@
-// ? React imports
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
-// ? Styles imports 
-import "./App.css";
-import "./index.css";
-
-
-// ? Components Imports
-import Home from "./Pages/Home"
+// Components Imports
+import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
+import Careers from "./Pages/Careers";
+import FounderStory from "./Pages/FounderStory";
+import Magzine from "./Pages/Magzine";
+import Register from "./Pages/Register";
 
 
 function App() {
   return (
-    <>
-      <div id="root">
-        <Home />
-        {/* <Magzine /> */}
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />    
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/founderstory" element={<FounderStory />} />
+        <Route path="/magzine" element={<Magzine />} />
+        <Route path="/register" element={<Register/>} />
+    
+      </Routes>
+    </Router>
   );
 }
 

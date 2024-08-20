@@ -1,12 +1,18 @@
 import React from 'react'
-import "../../assets/Styles/Components/Magzine.css";
-import "../../assets/Styles/Global.css";
-import "../../assets/Styles/default.css";
+import "../assets/Styles/Pages/Magzine.css";
+import NavBar from '../Components/Common/Navbar';
 
-const Magzine = () => {
+
+
+
+
+function Magzine() {
   return (
-    <div>Magzine</div>
-  )
+    <React.Fragment>
+      <NavBar />
+      <div>Magzine</div>
+    </React.Fragment>
+  );
 }
 
-export default Magzine
+export default Magzine;

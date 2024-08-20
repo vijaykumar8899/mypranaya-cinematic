@@ -1,10 +1,16 @@
 import React from "react";
-import "../../assets/Styles/Components/Register.css";
-import "../../assets/Styles/Global.css";
-import "../../assets/Styles/default.css";
+import "../assets/Styles/Pages/Register.css";
+import NavBar from "../Components/Common/Navbar";
 
-const Register = () => {
-  return <div>Register</div>;
-};
+
+function Register() {
+  return (
+    <React.Fragment>
+      <NavBar />
+      <div>Register</div>
+    </React.Fragment>
+  );
+}
 
 export default Register;
+
