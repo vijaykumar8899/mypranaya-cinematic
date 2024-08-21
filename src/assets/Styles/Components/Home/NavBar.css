@@ -1,53 +1,105 @@
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: linear-gradient(90deg, #ffffff, #3f3f3f);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  color: #ffffff;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  font-family: 'Arial', sans-serif;
 }
 
+/* Logo Styling */
 .navbar-logo {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: #ff4500;
+  height: 50px;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar-logo:hover {
-  color: #ff6347;
+  transform: scale(1.1); /* Slight scaling on hover */
 }
 
+/* Links Container */
 .navbar-links {
   display: flex;
-  gap: 10px;
+  justify-content: space-around;
+  flex: 1;
+  margin-left: 20px;
 }
 
+/* Button Styling */
 .navbar-links button {
-  background-color: #ff4500;
-  color: #fff;
+  background: none;
+  color: #666; /* Gray color for inactive links */
   border: none;
-  padding: 12px 20px;
-  margin: 0 5px;
+  padding: 2px 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem; /* Slightly larger font size */
+  position: relative;
+  margin: 0 20px; /* Margin between buttons */
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+  outline: none;
+  font-family: 'Montserrat', sans-serif; /* Stylish font for buttons */
+  font-weight: 600; /* Slightly bold for a modern look */
 }
 
+/* Hover Effect for Buttons */
 .navbar-links button:hover {
-  background-color: #ff6347;
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(255, 99, 71, 0.2);
+  color: #ff0000; /* Cyan glowing effect on hover */
 }
 
+/* Underline Effect */
+.navbar-links button:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  background: #ff0000; /* Cyan color for the circle */
+  border-radius: 50%; /* Makes the shape circular */
+  transition: width 0.3s, height 0.3s; /* Transition for smooth expansion */
+  position: absolute;
+  bottom: -12px; /* Adjust the position below the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Hover Effect for Circle */
+.navbar-links button:hover:after {
+  width: 10px;  /* Circle diameter */
+  height: 10px; /* Circle diameter */
+}
+
+/* Active Button Circle */
+.navbar-links button.active:after {
+  width: 50px; /* Full circle for active button */
+  height: 10px; /* Full circle for active button */
+}
+
+/* Hover Effect for Underline */
+.navbar-links button:hover:after {
+  width: 100%; /* Full width underline on hover */
+}
+
+/* Active Button Styling */
+.navbar-links button.active {
+  color: #ff0000; /* Cyan color for active button */
+  font-weight: bold; /* Bold text for active button */
+}
+
+/* Active Button Underline */
+.navbar-links button.active:after {
+  width: 100%; /* Full width underline for active button */
+  height: 3px; /* Slightly thicker underline */
+}
+
+/* Hover Effect for Active Button */
+.navbar-links button.active:hover:after {
+  width: 100%; /* Keep full width underline on hover for active button */
+}
+
+/* Button Press Effect */
 .navbar-links button:active {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(255, 99, 71, 0.1);
+  transform: scale(0.95); /* Slightly scale down on click */
 }

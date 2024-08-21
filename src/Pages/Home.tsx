@@ -11,8 +11,8 @@ function Home() {
   return (
     <React.Fragment>
       <NavBar />
-      <Introduction />
-      <ContactMe />
+      {/* <Introduction />
+      <ContactMe /> */}
     </React.Fragment>
   );
 };
